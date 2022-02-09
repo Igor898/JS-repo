@@ -1,6 +1,6 @@
 // №6
-function manyOperation(money) {
+function moneyOperation(money) {
     money = Number(prompt('Введите сумму, которую хотите положить'))
     return `Ваша сумма в ${money} руб. успешно зачислена`
 }
-alert(manyOperation())
+alert(moneyOperation())
