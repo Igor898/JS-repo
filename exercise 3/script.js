@@ -1,8 +1,22 @@
-// №3
-let a = Number(prompt('введите 1-е положительное число'))
-let b = Number(prompt('введите 2-е положительное число'))
-if (a >= 0 & b >= 0) {
-    alert(a - b)
-} else {
-    alert('нужно написать два положительных числа')
-} 
+'use strict'
+ 
+const products = [
+    {
+        id: 3,
+        price: 200,
+    },
+    {
+        id: 4,
+        price: 900,
+    },
+    {
+        id: 1,
+        price: 1000,
+    },
+];
+
+products.forEach(function (item) {
+    item.price = item.price * 0.85
+})
+
+console.log(products)

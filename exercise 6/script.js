@@ -1,6 +1,7 @@
-// №6
-function moneyOperation(money) {
-    money = Number(prompt('Введите сумму, которую хотите положить'))
-    return `Ваша сумма в ${money} руб. успешно зачислена`
+'use strict'
+let star = '*'
+let cnt = ''
+for (let i = 0; i < 21; i += 1) {
+    cnt += star
+    console.log(cnt)
 }
-alert(moneyOperation())
