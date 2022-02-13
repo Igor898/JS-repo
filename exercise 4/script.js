@@ -1,36 +1,46 @@
-// №4
-function sum(a, b) {
-    a = Number(prompt('Введите число'))
-    b = Number(prompt('Введите число'))
-    if (isNaN(a) || isNaN(b)) {
-        return 'Нужно ввести число'
-    } else return a + b
-}
-alert(sum())
+'use strict'
 
-function subtract(a, b) {
-    a = Number(prompt('Введите число'))
-    b = Number(prompt('Введите число'))
-    if (isNaN(a) || isNaN(b)) {
-        return 'Нужно ввести число'
-    } else return a - b
-}
-alert(subtract())
+const products = [
+    {
+        id: 3,
+        price: 127,
+        photos: [
+            "1.jpg",
+            "2.jpg",
+        ]
+    },
+    {
+        id: 5,
+        price: 499,
+        photos: []
+    },
+    {
+        id: 10,
+        price: 26,
+        photos: [
+            "3.jpg"
+        ]
+    },
+    {
+        id: 8,
+        price: 78,
+    },
+];
 
-function multiply(a, b) {
-    a = Number(prompt('Введите число'))
-    b = Number(prompt('Введите число'))
-    if (isNaN(a) || isNaN(b)) {
-        return 'Нужно ввести число'
-    } else return a * b
-}
-alert(multiply())
+let item = products.filter(function(photo) {
+    if (photo.photos) {
+        return photo
+    }
+})
 
-function divide(a, b) {
-    a = Number(prompt('Введите число'))
-    b = Number(prompt('Введите число'))
-    if (isNaN(a) || isNaN(b) || b === 0) {
-        return 'Нужно ввести число, последнее не должно быть 0'
-    } else return a / b
-}
-alert(divide())
+let itemPrice = products.sort(function(a, b) {
+    if (a.price == b.price) {
+        return 0
+    }
+    if (a.price > b.price) {
+        return 1
+    }else return -1
+})
+
+console.log(item)
+console.log(itemPrice)
