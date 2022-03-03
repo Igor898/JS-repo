@@ -1,0 +1,10 @@
+.message {
+    width: 300px;
+    color: white;
+    font-family: sans-serif;
+    padding: 15px;
+    border-radius: 20px;
+    position: fixed;
+    top: calc(100vh + 20px);
+    transition-duration: 1000ms;  
+}
